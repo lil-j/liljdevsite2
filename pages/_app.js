@@ -2,11 +2,16 @@ import React from "react"
 import App from "next/app";
 import "../styles.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Head from 'next/head'
 import { AnimatePresence } from "framer-motion";
 
 function MyApp({ Component, pageProps, router }) {
   return(
     <AnimatePresence exitBeforeEnter>
+      <Head>
+        <title>Jake</title>
+        <meta property="og:title" content="Jake or lilj" key="title" />
+      </Head>
       <Component {...pageProps} key={router.route}/>
     </AnimatePresence>
   )

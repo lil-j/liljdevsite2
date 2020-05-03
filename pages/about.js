@@ -1,4 +1,4 @@
-import {motion} from "framer-motion";
+import {motion, useViewportScroll} from "framer-motion";
 import Link from "next/link";
 
 const fadeInUp = {
@@ -36,6 +36,8 @@ const stagger = {
     }
   }
 }
+
+
 
 const About = props => (
   <motion.div  exit="exit" animate="animate" initial="initial">
