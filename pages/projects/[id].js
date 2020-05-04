@@ -83,7 +83,6 @@ export async function getStaticProps({ params }) {
   console.log(params)
   const res = await fetch(`http://my-json-server.typicode.com/lil-j/liljdevsite2/projects/${params.id}`)
   const post = await res.json()
-  console.log(post)
   const content = await fetch(post.content)
   const contentdone = await content.text()
   post.fullcontent = contentdone;
