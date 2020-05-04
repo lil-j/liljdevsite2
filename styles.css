@@ -58,3 +58,23 @@ body {
   width:23px;
   height:23px;
 }
+
+.shadow-low {
+    -webkit-box-shadow: 0 7px 14px 0 rgba(60,66,87,0.1), 0 3px 6px 0 rgba(0,0,0,0.07);
+    -moz-box-shadow: 0 7px 14px 0 rgba(60,66,87,0.1),0 3px 6px 0 rgba(0,0,0,0.07);
+    box-shadow: 0 7px 14px 0 rgba(60,66,87,0.1), 0 3px 6px 0 rgba(0,0,0,0.07);
+}
+
+.title-area {
+  background-color: rgb(51,90,64);
+  background: linear-gradient(180deg, #1e444a 75%, rgb(255, 255, 255) 25%);
+  width: 100%;
+  padding-top: 3vmin;
+  padding-bottom: 3vmin;
+}
+
+.project-content img{
+  max-width: 50%;
+    height: auto;
+    padding:10px;
+}

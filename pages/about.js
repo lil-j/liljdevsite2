@@ -1,6 +1,7 @@
 import {motion, useViewportScroll} from "framer-motion";
 import Link from "next/link";
-
+import fetch from "node-fetch";
+import Card from "../components/card";
 const fadeInUp = {
   initial: {
     y: 60,
@@ -38,7 +39,6 @@ const stagger = {
 }
 
 
-const { scrollYProgress } = useViewportScroll()
 
 const About = props => (
   <motion.div  exit="exit" animate="animate" initial="initial">
@@ -67,26 +67,32 @@ const About = props => (
           <br/>
           <br/>
           <motion.div variants={fadeInUp}>
-            <h1 className="display-1 font-weight-bold">Projects</h1>
-            <motion.path style={{ pathLength: scrollYProgress }}  d="M10 10"/>
+            <h1 className="font-weight-bold">Projects</h1>
+            {
+              props.posts.map(post => (
+                <Card image={post.thumbnail} title={post.title} description={post.description} link={post.link}/>
+              ))
+            }
           </motion.div>
         </div>
       </motion.div>
     </motion.div>
-    <br/>
-    <br/>
-    <br/>    <br/>
-        <br/>
-        <br/>    <br/>
-            <br/>
-            <br/>    <br/>
-                <br/>
-                <br/>    <br/>
-                    <br/>
-                    <br/>    <br/>
-                        <br/>
-                        <br/>
+
   </motion.div>
 )
+
+export async function getStaticProps() {
+  // Call an external API endpoint to get posts.
+  const res = await fetch('http://my-json-server.typicode.com/lil-j/liljdevsite2/projects/')
+  const posts = await res.json()
+
+  // By returning { props: posts }, the Blog component
+  // will receive `posts` as a prop at build time
+  return {
+    props: {
+      posts,
+    },
+  }
+}
 
 export default About;
