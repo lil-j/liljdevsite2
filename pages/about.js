@@ -38,6 +38,7 @@ const stagger = {
 }
 
 
+const { scrollYProgress } = useViewportScroll()
 
 const About = props => (
   <motion.div  exit="exit" animate="animate" initial="initial">
@@ -63,12 +64,28 @@ const About = props => (
               </div>
             </div>
           </motion.div>
+          <br/>
+          <br/>
+          <motion.div variants={fadeInUp}>
+            <h1 className="display-1 font-weight-bold">Projects</h1>
+            <motion.path style={{ pathLength: scrollYProgress }}  d="M10 10"/>
+          </motion.div>
         </div>
       </motion.div>
     </motion.div>
     <br/>
     <br/>
-    <br/>
+    <br/>    <br/>
+        <br/>
+        <br/>    <br/>
+            <br/>
+            <br/>    <br/>
+                <br/>
+                <br/>    <br/>
+                    <br/>
+                    <br/>    <br/>
+                        <br/>
+                        <br/>
   </motion.div>
 )
 
