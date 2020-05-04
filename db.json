@@ -2,6 +2,7 @@
   "projects": [
     {
       "id": 1,
+      "link":"/projects/1"
       "title": "Spartalytics",
       "content": "https://raw.githubusercontent.com/lil-j/spartalytics-public/master/README.md",
       "thumbnail":"https://camo.githubusercontent.com/b3c0110c04a23bbb548ac294ba531d8d7fe0473d/68747470733a2f2f692e696d6775722e636f6d2f306d77617137372e706e67",
