@@ -64,7 +64,7 @@ const Project = props => (
 // `getStaticPaths` allows the user to return a list of parameters to
 // render to HTML at build time.
 export async function getStaticPaths() {
-  const res = await fetch(`http://my-json-server.typicode.com/lil-j/liljdevsite2/projects/`)
+  const res = await fetch(`https://my-json-server.typicode.com/lil-j/liljdevsite2/projects/`)
   const posts = await res.json()
   const paths = posts.map(post =>({
         params: {id: post.id.toString()},
@@ -81,7 +81,7 @@ export async function getStaticPaths() {
 // For `/blog/hello-world` it would look like `{ slug: 'hello-world }`
 export async function getStaticProps({ params }) {
   console.log(params)
-  const res = await fetch(`http://my-json-server.typicode.com/lil-j/liljdevsite2/projects/${params.id}`)
+  const res = await fetch(`https://my-json-server.typicode.com/lil-j/liljdevsite2/projects/${params.id}`)
   const post = await res.json()
   const content = await fetch(post.content)
   const contentdone = await content.text()

@@ -83,7 +83,7 @@ const About = props => (
 
 export async function getStaticProps() {
   // Call an external API endpoint to get posts.
-  const res = await fetch('http://my-json-server.typicode.com/lil-j/liljdevsite2/projects/')
+  const res = await fetch('https://my-json-server.typicode.com/lil-j/liljdevsite2/projects/')
   const posts = await res.json()
 
   // By returning { props: posts }, the Blog component
