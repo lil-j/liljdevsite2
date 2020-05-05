@@ -56,7 +56,9 @@ const Index = props => (
           <h1 className="font-weight-bold display-3">Hi, I'm Jake.</h1>
           <h3>it's nice to meet you 👋</h3>
           <br/>
-          <Link href="about"><a>about me ›</a></Link>
+          <Link href="about"><a className="mr-3">about me ›</a></Link>
+
+          <Link href="project"><a>my work ›</a></Link>
       </motion.div>
     </div>
   </motion.div>

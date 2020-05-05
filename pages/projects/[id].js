@@ -44,7 +44,7 @@ const Project = props => (
     <motion.div variants={stagger}>
       <motion.div className="title-area" variants={fadeInUp}>
         <motion.div variants={fadeInUp} className="container">
-          <Link href="/about"><a className="text-light">go back ›</a></Link>
+          <Link href="/project"><a className="text-light">‹ go back</a></Link>
           <h1 className="text-center text-light font-weight-bold">{props.post.title}</h1>
           <br/>
           <img src={props.post.thumbnail} className="img-fluid shadow-low"/>

@@ -57,22 +57,12 @@ const About = props => (
                 <br/>
                 <h4><img className="icon" src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"/> <a className="text-info" href="https://github.com/lil-j">lil-j</a></h4>
                 <h4 className="text-info"><img className="icon" src="https://image.flaticon.com/icons/svg/2111/2111363.svg"/> lilj#5815</h4>
-                <Link href="/"><a>go back ›</a></Link>
+                <Link href="/"><a>‹ go back</a></Link>
               </div>
               <div className="col-lg-5 col-sm-12">
                 <img src="https://image-aws-us-west-2.vsco.co/24abcc/16303862/5caa7958efaf043c1f7997b3/vsco5caa795abbcaf.jpg" className="img-fluid"/>
               </div>
             </div>
-          </motion.div>
-          <br/>
-          <br/>
-          <motion.div variants={fadeInUp}>
-            <h1 className="font-weight-bold">Projects</h1>
-            {
-              props.posts.map(post => (
-                <Card image={post.thumbnail} title={post.title} description={post.description} link={post.link}/>
-              ))
-            }
           </motion.div>
         </div>
       </motion.div>
