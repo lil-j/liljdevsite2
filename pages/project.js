@@ -50,7 +50,7 @@ const Project = props => (
           <motion.div variants={fadeInUp}>
           <Link href="/"><a >‹ go back</a></Link>
             <h1 className="display-1 font-weight-bold">Projects</h1>
-            <h4>My recent work.</h4>
+            <h4>My recent work- more on my <a href="https://github.com/lil-j">Github</a></h4>
             <br />
             {
               props.posts.map(post => (
