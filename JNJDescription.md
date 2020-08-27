@@ -5,7 +5,7 @@ I decided to take up the website as my own responsibility. I knew that it had to
 
 
 # Check out the site!
-[Here]("https://jnjphotos.com")
+https://jnjphotos.com
 
 # Want to view the code?
 Due to privacy reasons, I am deciding to keep the repository private, but if you want to have a chat about the development of the site, feel free to reach out to me through email at jke.hrpr@gmail.com!
