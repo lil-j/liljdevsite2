@@ -47,8 +47,8 @@ const About = props => (
       <br/>
       <motion.div variants={stagger} className="about-content">
         <div className="container">
-          <Link href="/"><a>‹ go back</a></Link>
           <motion.div variants={fadeInUp}>
+            <Link href="/"><a>‹ go back</a></Link>
             <h1 className="display-1 font-weight-bold">About Me</h1>
           </motion.div>
           <motion.div variants={fadeInUp}>
