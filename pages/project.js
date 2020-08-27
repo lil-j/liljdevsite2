@@ -52,11 +52,13 @@ const Project = props => (
             <h1 className="display-1 font-weight-bold">Projects</h1>
             <h4>My recent work- more on my <a href="https://github.com/lil-j">Github</a></h4>
             <br />
-            {
-              props.posts.map(post => (
-                <Card image={post.thumbnail} title={post.title} description={post.description} link={post.link}/>
-              ))
-            }
+            <div className="row">
+              {
+                props.posts.map(post => (
+                    <Card image={post.thumbnail} title={post.title} description={post.description} link={post.link}/>
+                ))
+              }
+            </div>
           </motion.div>
         </div>
       </motion.div>
