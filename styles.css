@@ -94,3 +94,7 @@ body {
 .project-content p {
   font-size: 23px;
 }
+
+a {
+  color: #1d3553 !important;
+}
