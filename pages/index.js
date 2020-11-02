@@ -1,10 +1,23 @@
 import Particles from "react-particles-js";
 import {motion} from "framer-motion";
 import Link from "next/link";
+import Head from 'next/head';
 
 
 const Index = props => (
   <motion.div id="index" exit={{opacity: 0}} initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+      <Head>
+          <title>Hi, I'm Jake</title>
+          <meta name="description" content="It's nice to meet you!"/>
+          <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+          <meta charSet="UTF-8"/>
+          <meta property="og:title" content="Hi, I'm Jake"/>
+          <meta property="og:description" content="It's nice to meet you!"/>
+          <meta name="twitter:card" content="summary_large_image"/>
+          <meta property="og:image" content="https://image-aws-us-west-2.vsco.co/24abcc/16303862/5caa7958efaf043c1f7997b3/vsco5caa795abbcaf.jpg"/>
+          <meta name="theme-color" content="#43ccb8"/>
+          <meta name="msapplication-TileColor" content="#43ccb8"/>
+      </Head>
     <Particles params={{
       "particles": {
           "number": {

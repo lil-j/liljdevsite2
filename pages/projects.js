@@ -3,6 +3,7 @@ import Link from "next/link";
 import fetch from "node-fetch";
 import Card from "../components/card";
 import { GraphQLClient } from 'graphql-request';
+import Head from "next/head";
 
 const fadeInUp = {
   initial: {
@@ -51,6 +52,16 @@ const graphcms = new GraphQLClient(
 
 export default function Projects({posts}) {
   return <motion.div  exit="exit" animate="animate" initial="initial">
+    <Head>
+      <title>My Projects | Jake Harper</title>
+      <meta name="description" content="Check out what I've worked on"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <meta charSet="UTF-8"/>
+      <meta property="og:title" content="My Projects"/>
+      <meta property="og:description" content="Check out what I've worked on"/>
+      <meta name="theme-color" content="#43ccb8"/>
+      <meta name="msapplication-TileColor" content="#43ccb8"/>
+    </Head>
     <motion.div id="about">
       <br/>
       <br/>

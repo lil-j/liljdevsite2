@@ -15,9 +15,11 @@
     "graphql-request": "^3.3.0",
     "markdown-to-jsx": "^6.11.1",
     "next": "^10.0.0",
+    "node": "^15.0.1",
     "node-fetch": "^2.6.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-particles-js": "^3.2.1"
+    "react-particles-js": "^3.2.1",
+    "vibrant": "^0.0.1"
   }
 }

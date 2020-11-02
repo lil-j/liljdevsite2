@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { GraphQLClient } from 'graphql-request';
 import { useRouter } from "next/router";
+import Image from 'next/image';
+import Head from "next/head";
 
 const graphcms = new GraphQLClient(
     'https://api-us-west-2.graphcms.com/v2/ckh075cadpa2i01xk64mw3z8q/master', {
@@ -19,6 +21,7 @@ export async function getStaticProps({ params }) {
       `query MyQuery {
         post(where: {slug: "${params.slug}"}) {
         date
+        excerpt
         content {
           markdown
         }
@@ -107,17 +110,29 @@ function Project({post}){
   } else {
   return (
   <motion.div exit="exit" animate="animate" initial="initial">
+    <Head>
+      <title>{post.title} | Jake Harper</title>
+      <meta name="description" content={post.excerpt}/>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <meta charSet="UTF-8"/>
+      <meta property="og:title" content={post.title}/>
+      <meta property="og:description" content={post.excerpt}/>
+      <meta name="twitter:card" content="summary_large_image"/>
+      <meta property="og:image" content={post.coverImage.url}/>
+      <meta name="theme-color" content="#43ccb8"/>
+      <meta name="msapplication-TileColor" content="#43ccb8"/>
+    </Head>
     <motion.div variants={stagger}>
       <motion.div className="title-area" variants={fadeInUp}>
         <motion.div variants={fadeInUp} className="container">
           <Link href="/projects"><a className="text-light">‹ go back</a></Link>
           <h1 className="text-center text-light font-weight-bold">{post.title}</h1>
           <br/>
-          <img src={post.coverImage.url} className="img-fluid shadow-low"/>
+          <Image src={post.coverImage.url} className="img-fluid shadow-low" alt="cover image" unsized/>
         </motion.div>
       </motion.div>
       <motion.div variants={fadeInUp} className="container project-content">
-      <Markdown>{post.content.markdown}</Markdown>
+        <Markdown>{post.content.markdown}</Markdown>
       </motion.div>
     </motion.div>
   </motion.div>

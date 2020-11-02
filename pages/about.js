@@ -2,6 +2,7 @@ import {motion, useViewportScroll} from "framer-motion";
 import Link from "next/link";
 import fetch from "node-fetch";
 import Card from "../components/card";
+import Head from "next/head";
 const fadeInUp = {
   initial: {
     y: 60,
@@ -42,6 +43,18 @@ const stagger = {
 
 const About = props => (
   <motion.div  exit="exit" animate="animate" initial="initial">
+    <Head>
+      <title>About Me | Jake Harper</title>
+      <meta name="description" content="It's nice to meet you!"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <meta charSet="UTF-8"/>
+      <meta property="og:title" content="About Me"/>
+      <meta property="og:description" content="This is who I am."/>
+      <meta name="twitter:card" content="summary_large_image"/>
+      <meta property="og:image" content="https://image-aws-us-west-2.vsco.co/24abcc/16303862/5caa7958efaf043c1f7997b3/vsco5caa795abbcaf.jpg"/>
+      <meta name="theme-color" content="#43ccb8"/>
+      <meta name="msapplication-TileColor" content="#43ccb8"/>
+    </Head>
     <motion.div id="about">
       <br/>
       <br/>

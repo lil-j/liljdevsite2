@@ -3805,6 +3805,11 @@ node-addon-api@^3.0.2:
   resolved "https://registry.yarnpkg.com/node-addon-api/-/node-addon-api-3.0.2.tgz#04bc7b83fd845ba785bb6eae25bc857e1ef75681"
   integrity sha512-+D4s2HCnxPd5PjjI0STKwncjXTUKKqm74MDMz9OPXavjsGmjkvwgLtA5yoxJUdmpj52+2u+RrXgPipahKczMKg==
 
+node-bin-setup@^1.0.0:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/node-bin-setup/-/node-bin-setup-1.0.6.tgz#4b5c9bb937ece702d7069b36ca78af4684677528"
+  integrity sha512-uPIxXNis1CRbv1DwqAxkgBk5NFV3s7cMN/Gf556jSw6jBvV7ca4F9lRL/8cALcZecRibeqU+5dFYqFFmzv5a0Q==
+
 node-fetch@2.6.0:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.0.tgz#e633456386d4aa55863f676a7ab0daa8fdecb0fd"
@@ -3855,6 +3860,13 @@ node-releases@^1.1.58, node-releases@^1.1.65:
   version "1.1.65"
   resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-1.1.65.tgz#52d9579176bd60f23eba05c4438583f341944b81"
   integrity sha512-YpzJOe2WFIW0V4ZkJQd/DGR/zdVwc/pI4Nl1CZrBO19FdRcSTmsuhdttw9rsTzzJLrNcSloLiBbEYx1C4f6gpA==
+
+node@^15.0.1:
+  version "15.0.1"
+  resolved "https://registry.yarnpkg.com/node/-/node-15.0.1.tgz#f079c534a68c4cd04323958fe5293d501dda5da6"
+  integrity sha512-1H+cBZRGVVU8df/pxanHE9gjxjEzupMfvMw43/79dvPfIvNQJR1T0uxeHfXFIYWH86JthQbu8zes7vtttP+99g==
+  dependencies:
+    node-bin-setup "^1.0.0"
 
 noop-logger@^0.1.1:
   version "0.1.1"
@@ -5117,6 +5129,11 @@ through2@^2.0.0:
     readable-stream "~2.3.6"
     xtend "~4.0.1"
 
+through@~2.3.4:
+  version "2.3.8"
+  resolved "https://registry.yarnpkg.com/through/-/through-2.3.8.tgz#0dd4c9ffaabc357960b1b724115d7e0e86a2e1f5"
+  integrity sha1-DdTJ/6q8NXlgsbckEV1+Doai4fU=
+
 timers-browserify@^2.0.4:
   version "2.0.12"
   resolved "https://registry.yarnpkg.com/timers-browserify/-/timers-browserify-2.0.12.tgz#44a45c11fbf407f34f97bccd1577c652361b00ee"
@@ -5347,6 +5364,13 @@ util@^0.11.0:
   integrity sha512-HShAsny+zS2TZfaXxD9tYj4HQGlBezXZMZuM/S5PKLLoZkShZiGk9o5CzukI1LVHZvjdvZ2Sj1aW/Ndn2NB/HQ==
   dependencies:
     inherits "2.0.3"
+
+vibrant@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/vibrant/-/vibrant-0.0.1.tgz#bf55ff041ffade983bc2b25a20ab4e9cfc312891"
+  integrity sha1-v1X/BB/63pg7wrJaIKtOnPwxKJE=
+  dependencies:
+    through "~2.3.4"
 
 vm-browserify@1.1.2, vm-browserify@^1.0.1:
   version "1.1.2"
