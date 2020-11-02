@@ -78,8 +78,7 @@ body {
 }
 
 .title-area {
-  background-color: rgb(51,90,64);
-  background: linear-gradient(180deg, #1e444a 75%, rgb(255, 255, 255) 25%);
+  background: rgb(51, 90, 64) linear-gradient(180deg, #1e444a 75%, rgb(255, 255, 255) 25%);
   width: 100%;
   padding-top: 3vmin;
   padding-bottom: 3vmin;
