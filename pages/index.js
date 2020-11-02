@@ -58,7 +58,7 @@ const Index = props => (
           <br/>
           <Link href="about"><a className="mr-3">about me ›</a></Link>
 
-          <Link href="project"><a>my work ›</a></Link>
+          <Link href="projects"><a>my work ›</a></Link>
       </motion.div>
     </div>
   </motion.div>
