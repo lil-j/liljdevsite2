@@ -67,7 +67,7 @@ const Index = props => (
     <div className="landing">
       <motion.div className="landing-content" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
           <h1 className="font-weight-bold display-3">Hi, I'm Jake.</h1>
-          <h3>it's nice to meet you 👋</h3>
+          <h2>it's nice to meet you 👋</h2>
           <br/>
           <Link href="about"><a className="mr-3">about me ›</a></Link>
 
