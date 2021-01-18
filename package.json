@@ -19,6 +19,7 @@
     "node-fetch": "^2.6.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-loading-skeleton": "^2.1.1",
     "react-particles-js": "^3.2.1",
     "use-last-fm": "^0.6.0",
     "vibrant": "^0.0.1"

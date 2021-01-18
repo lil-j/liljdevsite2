@@ -5,6 +5,8 @@ import Card from "../components/card";
 import Head from "next/head";
 import { useLastFM } from "use-last-fm";
 import Image from "next/image";
+import Skeleton from 'react-loading-skeleton';
+
 // function CurrentlyPlayingSong(props) {
 //   if (status === "connecting" || status === "idle") {
 //     return <>🎵 Not listening to anything</>;
@@ -86,14 +88,14 @@ function About(props){
               </motion.div>
               <motion.div variants={fadeInUp}>
                 <div className="row">
-                  <div className="col-lg-7 col-sm-12">
+                  <div className="col-lg-6 col-sm-12 mb-3 mb-lg-0">
                     <h4>I love running, taking photos, making videos, trading stocks, and hanging out with friends- but my true passion is computer programming. After starting with making simple python-based 'bots' using the Discord API, I quickly saw it as a business opportunity, and grew upon that for multiple months. A year later I have expanded into different areas of programming such as full-stack web applications and even working with artificial intelligence. I love Next.Js!</h4>
                     <br/>
                     <h4><img alt="Github" className="icon" src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"/> <a className="text-info" href="https://github.com/lil-j">lil-j</a></h4>
                     <h4 className="text-info"><img className="icon" alt="Discord" src="https://image.flaticon.com/icons/svg/2111/2111363.svg"/> lilj#0001</h4>
                     <br/>
                     <br/>
-                    {song&&<div className="card w-75">
+                    {song ? <div className="card">
                       <div className="row g-0">
                         <div className="col-md-8">
                           <div className="card-body">
@@ -106,10 +108,13 @@ function About(props){
                           <img src={song.art} className="card-img-top" alt="album art"/>
                         </div>
                       </div>
-                    </div>}
+                    </div> : <>
+                      <div className="d-none d-lg-block"><Skeleton height={150} width={540}/></div>
+                      <div className="d-lg-none d-block"><Skeleton height={300} width={345}/></div>
+                    </>}
                   </div>
-                  <div className="col-lg-5 col-sm-12">
-                    <Image src="/img/flower.jpg" className="img-fluid d-xs-none d-sm-none d-md-none d-lg-block" alt="Flower Image" width={445} height={667} fill="responsive"/>
+                  <div className="col-lg-6 col-sm-12">
+                    <Image src="/img/flower.jpg" className="img-fluid d-none d-lg-block" alt="Flower Image" width={445} height={667} fill="responsive"/>
                   </div>
                 </div>
               </motion.div>
