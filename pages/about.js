@@ -104,7 +104,7 @@ function About(props){
                           <div className="card-body">
                             <h5 className="card-title font-weight-bold">Playing On Spotify</h5>
                             <p className="card-text">{song.name}</p>
-                            <p className="card-text"><small className="text-muted">On <a href={song.url} target="_blank">{song.album}</a></small></p>
+                            <p className="card-text"><small className="text-muted">On <a href={song.url} target="_blank">{song.album}</a> by <span className="font-weight-bold">{song.artist}</span></small></p>
                           </div>
                         </div>
                         <div className="col-md-4">
