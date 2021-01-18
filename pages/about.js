@@ -97,14 +97,14 @@ function About(props){
                     <br/>
                     {status == "connecting" ? <>
                       <div className="d-none d-lg-block"><Skeleton height={150} width={540}/></div>
-                      <div className="d-lg-none d-block"><Skeleton height={300} width={345}/></div>
+                      <div className="d-lg-none d-block"><Skeleton height={500} width={345}/></div>
                     </> : status == "playing"&&<div className="card">
                       <div className="row g-0">
                         <div className="col-md-8">
                           <div className="card-body">
                             <h5 className="card-title font-weight-bold">Playing On Spotify</h5>
                             <p className="card-text">{song.name}</p>
-                            <p className="card-text"><small className="text-muted">On <a href={song.url} target="_blank">{song.album}</a> by <span className="font-weight-bold">{song.artist}</span></small></p>
+                            <p className="card-text"><small className="text-muted">On <a className="font-weight-bold" href={song.url} target="_blank">{song.album}</a> by <span className="font-italic">{song.artist}</span></small></p>
                           </div>
                         </div>
                         <div className="col-md-4">
