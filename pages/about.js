@@ -109,7 +109,7 @@ function About(props){
                     </div>}
                   </div>
                   <div className="col-lg-5 col-sm-12">
-                    <Image src="/img/flower.jpg" className="img-fluid" alt="Flower Image" width={445} height={667} fill="responsive"/>
+                    <Image src="/img/flower.jpg" className="img-fluid d-xs-none d-sm-none d-md-none d-lg-block" alt="Flower Image" width={445} height={667} fill="responsive"/>
                   </div>
                 </div>
               </motion.div>
