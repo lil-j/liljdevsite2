@@ -95,7 +95,10 @@ function About(props){
                     <h4 className="text-info"><img className="icon" alt="Discord" src="https://image.flaticon.com/icons/svg/2111/2111363.svg"/> lilj#0001</h4>
                     <br/>
                     <br/>
-                    {song ? <div className="card">
+                    {status == "connecting" ? <>
+                      <div className="d-none d-lg-block"><Skeleton height={150} width={540}/></div>
+                      <div className="d-lg-none d-block"><Skeleton height={300} width={345}/></div>
+                    </> : status == "playing"&&<div className="card">
                       <div className="row g-0">
                         <div className="col-md-8">
                           <div className="card-body">
@@ -108,10 +111,7 @@ function About(props){
                           <img src={song.art} className="card-img-top" alt="album art"/>
                         </div>
                       </div>
-                    </div> : <>
-                      <div className="d-none d-lg-block"><Skeleton height={150} width={540}/></div>
-                      <div className="d-lg-none d-block"><Skeleton height={300} width={345}/></div>
-                    </>}
+                      </div>}
                   </div>
                   <div className="col-lg-6 col-sm-12">
                     <Image src="/img/flower.jpg" className="img-fluid d-none d-lg-block" alt="Flower Image" width={445} height={667} fill="responsive"/>
