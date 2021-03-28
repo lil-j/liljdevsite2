@@ -32,7 +32,7 @@ export default function ValorantModal() {
                     <div className="card-body">
                         <h5 className="card-title font-weight-bold">Hey Riot / Valorant Team! 🙋‍♂</h5>
                         <p className="card-text">I did not realize a mockup was heavily recommended when applying for an API key so this page is not that, unfortunately.
-                            Rather it is a mirror of my personal website while I begin working on a mockup for you to check out.
+                            Rather it is a mirror of my personal website that I put in place while I begin working on a mockup for you to check out.
                             Feel free to take a look at some of my other projects that are linked on this page if you are interested in a bit more of what I have done.</p>
                         <a onClick={() => setClosed(true)} className="btn btn-primary text-light">View My Page</a>
                     </div>
