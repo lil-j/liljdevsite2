@@ -108,6 +108,7 @@ export async function getStaticProps() {
 }
     `
   );
+  posts.reverse(); //flip order so it is from most recent project -> oldest
   return {
     revalidate: 60,
     props: {
