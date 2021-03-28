@@ -2,8 +2,7 @@ import Particles from "react-particles-js";
 import {motion} from "framer-motion";
 import Link from "next/link";
 import Head from 'next/head';
-
-
+import ValorantModal from "../components/ValorantModal";
 const Index = props => (
   <motion.div id="index" exit={{opacity: 0}} initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
       <Head>
@@ -65,7 +64,9 @@ const Index = props => (
           }
       }}} className="landing-particles"/>
     <div className="landing">
-      <motion.div className="landing-content" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+        {/*{window.location.href.includes("valorant") && <ValorantModal/>}*/}
+        <ValorantModal/>
+        <motion.div className="landing-content" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
           <h1 className="font-weight-bold display-3">Hi, I'm Jake.</h1>
           <h2>it's nice to meet you 👋</h2>
           <br/>
