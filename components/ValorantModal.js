@@ -1,8 +1,12 @@
 import { motion, AnimatePresence } from "framer-motion";
-import {useState} from "react";
+import { useState, useEffect } from "react";
 export default function ValorantModal() {
     const [close, setClosed] = useState(false)
-
+    useEffect(() => {
+        if (!window.location.href.includes("valorant")) {
+            setClosed(true)
+        }
+    }, [])
     return (
         <AnimatePresence>
             {

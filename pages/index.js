@@ -64,7 +64,6 @@ const Index = props => (
           }
       }}} className="landing-particles"/>
     <div className="landing">
-        {/*{window.location.href.includes("valorant") && <ValorantModal/>}*/}
         <ValorantModal/>
         <motion.div className="landing-content" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
           <h1 className="font-weight-bold display-3">Hi, I'm Jake.</h1>
