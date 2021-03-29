@@ -13,11 +13,13 @@ export default function ValorantModal() {
                 !close && <motion.div
                     initial={{
                         opacity:0,
+                        display:"none",
                         y:50
                     }}
                     animate={{
                         opacity:1,
                         y:0,
+                        display:"block",
                         transition: {
                             delay: 1
                         }
